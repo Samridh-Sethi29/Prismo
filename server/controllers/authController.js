@@ -123,8 +123,16 @@ const token = generateToken(user._id);
     }
 };
 
+const logoutUser = async (req, res) => {
+    return res.status(200).json({
+        success: true,
+        message: "Logged out successfully",
+    });
+};
+
 
 module.exports = {
     registerUser,
     loginUser,
+    logoutUser,
 };
